@@ -280,6 +280,7 @@ RCT_EXPORT_METHOD(getConnectedPeripherals:(NSArray *)serviceUUIDStrings callback
 RCT_EXPORT_METHOD(start:(NSDictionary *)options callback:(nonnull RCTResponseSenderBlock)callback)
 {
     NSLog(@"BleManager initialized");
+    [self init];
     NSMutableDictionary *initOptions = [[NSMutableDictionary alloc] init];
     
     if ([[options allKeys] containsObject:@"showAlert"]){
